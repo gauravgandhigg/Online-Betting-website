@@ -1,0 +1,52 @@
+<html>
+<link rel="stylesheet" type="text/css" href="/style.css"/>
+<body>
+
+    <div name="bet_ip" style="./style.css">
+    <% if session[:valid]%>
+    <h1> <%= session[:message]%><h1>
+    <% session[:message] = nil%>
+    <h2>Let's roll the dice!</h2>
+    <h4>(Numbers must be between 1 and 6)</h4>
+   
+    
+    <form action="/bet" method="Get">
+            <h3>Enter your stake:<input type="text" name="stake"></input></h3>
+            <h3>Enter the number:<input type="text" name="number"></input><br></h3>
+            <h3>Place your bet: <input type="submit" name="submit"></input></h3>
+    </form><br>
+    <% if session[:result]%>
+        <h2><%= session[:result]%>
+    </div>
+    <br>
+    <div name="bet_op" style="./style.css">
+        <br>
+        <h1>Session data</h1>
+        <hr>
+        <h3 name="won_money" style="./style.css ">Money Won:<br><%= session[:win]%></h3>
+        <h3 name="lost_money" style="./style.css">Money Lost:<br> <%= session[:lost]%></h3>
+        <h3 name="total_money" style="./style.css">Total money: <br><%= session[:total]%></h3>        
+        
+
+        <h3><a name= "logout_button" style="./style.css" href="/logout">Log out.</a></h3><br>  
+    </div>
+    
+
+    
+    <div name="user_history" style="./style.css">
+    <h2>Previous Data<h2>
+    <hr>
+    <h3 name="Total" style="./style.css "><pre>         Total:           Total winnings:          Total lost:</h3>
+    <h3 name="Total lost" style="./style.css"><pre><%= session[:ftotal]%>             <%= session[:fwon]%>                     <%= session[:flost]%></h3>
+        
+    </div>
+    <%end%>
+    <%else %>
+    <h1 >You've to login first</h1>
+    <%= erb :auth %>    
+    <%end%>
+
+
+
+</body>
+</html>

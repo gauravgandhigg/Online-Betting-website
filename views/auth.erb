@@ -1,0 +1,20 @@
+<link rel="stylesheet" type="text/css" href="/style.css"/>
+<br>
+<div name="login_div" style="./style.css">
+<h1 > Login</h1><hr><br>
+<form action="/auth" method="POST">
+        <% if session[:signup]%>
+        <%= session[:signup] %>
+        <h1><%session[:signup]=nil%></h1><br>
+        <% else%> 
+        <%if session[:valid]==false%>
+        <h1>Enter valid information</h1><br>
+        <%end%>
+        <%end%>
+            <h4>Username:<input type="text" name="username"></input><h4>
+            <h4>Password:<input type="text" name="password"></input><h4><br>
+            <input type="submit" name="submit"></input> <br>
+<h4><a href="/signup">Not our member?  Signup</a></h4>
+</form>
+
+</div> 

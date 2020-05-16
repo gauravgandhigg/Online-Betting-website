@@ -1,0 +1,86 @@
+a[name=logout_button]{
+    margin-left: 30px ;background-color: orangered; width: 100;
+    color: white;
+    padding: 14px 25px;
+
+    text-decoration: none;
+    display: inline-block;
+}
+
+
+
+
+div[name=signup_div]{
+    
+    background-color: bisque;
+    display: block; text-align: center; height: 400px; width: 600px; ; border-style: double;
+    margin-left: 400px;
+
+}
+
+div[name=login_div]
+{
+    
+    background-color: bisque;
+    display: block; text-align: center; height: 400px; width: 600px; ; border-style: double;
+    margin-left: 400px;
+
+}
+div[name=bet_info]{
+    background-color: bisque;
+}
+
+div[name=user_history]{
+    background-color: bisque;
+    display: block; text-align: center; height: 180px; width: 700px; ; border-style: double;
+    margin-left: 10px;
+    margin-top:10px;
+    margin-right: 300px;
+    float: left;
+}
+
+
+
+div[name=bet_ip]{
+    
+    background-color: bisque;
+    display: block; text-align: center; height: 400px; width: 600px; ; border-style: double;
+    margin-left: 10px;
+    margin-top:150px;
+    float: left;
+}
+
+
+div[name=bet_op]{
+    
+    background-color: bisque ;
+    margin-top: 30px;
+    display: block; text-align: center; height: 400px; width: 600px; ; border-style: double;
+    float: right;
+    margin-right: 40px;
+
+}
+
+h3[name=lost_money]{
+    font-weight: bold ; color: brown; background-color: cornsilk;
+}
+h3[name=won_money]{
+    font-weight: bold ; color: brown; background-color: cornsilk;
+}
+h3[name=total_money]{
+    font-weight: bold ; color: brown; background-color: cornsilk;
+}
+
+
+
+
+body[name= main_body]{
+    background-image: url("./bet.jpg");
+    background-size: cover;
+}
+h1[name=main_heading]{
+    margin-top: 40px;
+    margin-left: 10px;
+    font-weight: bold; font-size: 300% ;margin-right: 20px; color: brown; background-color: cornsilk
+}
+
